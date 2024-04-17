@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Hacked-KerX";
-  src: url("https://jejakhacker.com/wp-content/themes/hack-theme/assets/font/Hacked-KerX.ttf")
+  src: url("../wp-content/themes/wp-hacker-amp-theme/assets/font/Hacked-KerX.ttf")
     format("truetype");
   font-display: swap;
 }
@@ -8,7 +8,7 @@
   --font-primary: Hacked-KerX, monospace;
   --font-secondary: monospace;
   --color-primary: #00ff00;
-  --color-secondary: #8b8b8b;
+  --color-secondary: #9f9f9f;
   --color-green: #00dd00;
   --color-blue: #10e3ff;
   --color-yellow: #e5ff00;
@@ -121,10 +121,10 @@ html {
 }
 body {
   font-family: var(--font-secondary);
-  font-size: 1.7em;
+  font-size: 1.85em;
   line-height: 1.428571429;
   color: var(--color-secondary);
-  background-color: #222;
+  background-color: var(--bg-primary);
   height: 100%;
 }
 .dropdown:hover .dropdown-menu {
@@ -368,7 +368,7 @@ h6 {
   font-size: 1.125em;
 }
 p {
-  margin: 0 0 10px;
+  margin: 0 0 2rem;
 }
 .small,
 small {
@@ -3300,6 +3300,10 @@ a.list-group-item-danger.active:hover {
 .visible-xs-inline,
 .visible-xs-inline-block {
   display: none;
+}
+.entry-content img {
+	width: 100%;
+	max-height: 300px;
 }
 @media (max-width: 767px) {
   .visible-xs {
