@@ -1,7 +1,7 @@
 <amp-ad width="100vw" height="320"
      type="adsense"
-     data-ad-client="ca-pub-2210641982880524"
-     data-ad-slot="6218207143"
+     data-ad-client="ca-pub-3780041077137992"
+     data-ad-slot="1782717232"
      data-auto-format="rspv"
      data-full-width="">
   <div overflow="Memuat iklan ..."></div>
