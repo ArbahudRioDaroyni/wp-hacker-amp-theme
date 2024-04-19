@@ -10,6 +10,9 @@
 // @import 'partials/functions';
 @import 'vendors/_font';
 
+.w-100 {
+  width: 100%;
+}
 .dropdown:hover .dropdown-menu {
   display: block;
 }

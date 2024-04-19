@@ -26,15 +26,13 @@ function content_filter($content){
 	$patterns = [
 		'/<img (.*?) class="(.*?)>/',
 		'/<p([^>]+)?>/',
-		'/<div class="wp-block-button">(.*?)<\/div>/',
-		'/wp-block-button__link/',
+		'/<a class="wp-block-button__link (.*?)" (.*?)>/',
 		'/<table([^>]+)?>/',
 	];
 	$replacements = [
 		'<img $1 class="img-responsive w-100 $2>',
 		'<p class="text">',
-		'<p class="wp-block-button">$1</p>',
-		'btn btn-primary" style="font-family:var(--font-primary);font-size:2rem;width:100%;padding:1rem;font-size:2.25rem;font-weight:600;',
+		'<a class="btn btn-primary wp-block-button__link $1" $2 style="width:100%;padding: 1rem;margin: 1rem 0;">',
 		'<table class="table table-striped table-hover m-0">'
 	];
 	
