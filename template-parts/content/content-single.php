@@ -47,12 +47,12 @@
 			<?php if (has_tag()) {
 				foreach (get_the_tags() as $value) { ?>
 				<li>
-					#<a href="<?= esc_url( get_tag_link( $value ) ) ?>" rel="tag" class=""><?= $value->name ?>&nbsp;</a> 
+					#<a href="<?= esc_url( get_tag_link( $value ) ) ?>" rel="tag nofollow" class=""><?= $value->name ?>&nbsp;</a> 
 				</li> 
 				<?php } ?>
 			<?php } else { ?>
 				<li>
-					#<a href="javascript:void(0)" rel="tag" class="">tanpa tag</a> 
+					#<a href="javascript:void(0)" rel="tag nofollow" class="">tanpa tag</a> 
 				</li>
 			<?php } ?>
 		</ul>

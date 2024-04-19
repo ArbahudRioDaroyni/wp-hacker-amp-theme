@@ -33,7 +33,7 @@ get_header();
             <div class="meta">
               <img src="<?= get_avatar_url($comment, null) ?>" alt="<?php echo esc_attr( get_the_author() ); ?>" class="" width="35" height="35">
               <span class="">Ditulis oleh 
-                <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" title="<?php echo esc_attr( get_the_author() ); ?>" class="url fn" rel="author"><?php the_author(); ?></a>
+                <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" title="<?php echo esc_attr( get_the_author() ); ?>" class="url fn nofollow" rel="author"><?php the_author(); ?></a>
               </span> |
               <time class="entry-date updated" datetime="<?php the_time('Y-m-d H:i'); ?>"><?php the_time( 'l, d F Y' ); ?></time>
             </div>
@@ -59,7 +59,13 @@ get_header();
           <ul class="pagination">
             <?php
             foreach ( $pages as $page ) { ?>
-              <li><?php echo str_replace('current', 'active', $page); ?></li>
+              <li>
+                <?php
+                  $newPage = str_replace('page-numbers', 'pagination-link', $page);
+                  $newPageNoFollow = str_replace('pagination-link current', 'is-current pagination-link', $newPage);
+                  echo str_replace('pagination-link', 'pagination-link" rel="nofollow', $newPageNoFollow);
+                ?>
+              </li>
             <?php } ?>
           </ul>
         </nav>

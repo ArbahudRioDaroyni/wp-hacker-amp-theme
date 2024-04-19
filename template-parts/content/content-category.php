@@ -56,7 +56,13 @@ if ( $postslist->have_posts() ) : ?>
 		<ul class="pagination">
 			<?php
 			foreach ( $pages as $page ) { ?>
-				<li><?php echo str_replace('current', 'active', $page); ?></li>
+				<li>
+					<?php
+						$newPage = str_replace('page-numbers', 'pagination-link', $page);
+						$newPageNoFollow = str_replace('pagination-link current', 'is-current pagination-link', $newPage);
+						echo str_replace('pagination-link', 'pagination-link" rel="nofollow', $newPageNoFollow);
+					?>
+				</li>
 			<?php } ?>
 		</ul>
 	</nav>

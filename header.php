@@ -100,7 +100,7 @@
                   <li <?php if (is_category()) {
                       echo (get_the_category()[0]->slug == $category->slug) ? 'class="active"' : '' ;
                   } ?> >
-                    <a href="<?= esc_url( get_category_link( $category->term_id ) ) ?>"><?= esc_html( $category->name ) ?></a>
+                    <a href="<?= esc_url( get_category_link( $category->term_id ) ) ?>" rel="nofollow"><?= esc_html( $category->name ) ?></a>
                   </li>
                 <?php endforeach; ?>
               </ul>
