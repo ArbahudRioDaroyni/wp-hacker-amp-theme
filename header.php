@@ -52,7 +52,7 @@
 
   </head>
   <body>
-    <amp-auto-ads type="adsense" data-ad-client="<?= get_ID_adsense()['ca-pub'] ?>"></amp-auto-ads>
+    <amp-auto-ads type="adsense" data-ad-client="ca-pub-2210641982880524"></amp-auto-ads>
     <header>
       <nav class="navbar navbar-default navbar-static-top">
         <div class="container">

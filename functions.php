@@ -2,11 +2,6 @@
 $theme = wp_get_theme();
 define('THEME_VERSION', $theme->Version); //gets version written in your style.css
 
-function get_ID_adsense() {
-	return $ID [
-		'ca-pub' => 'ca-pub-2210641982880524'
-	];
-}
 /**
  * Remove emoji script and styles from <head>
  */
