@@ -9,7 +9,7 @@
 ?>
 <div class="sidebar">
   <!-- widget advertisement -->
-  <?php get_template_part( 'template-parts/ads/ads', 'card-article' )?>
+  <?php get_template_part( 'template-parts/components', 'adsense-display' )?>
 
   <?php get_template_part( 'template-parts/widgets/list-file' ); ?>
   
@@ -17,14 +17,14 @@
 
   <?php get_template_part( 'template-parts/widgets/recent-posts' ); ?>
 
-  <?php get_template_part( 'template-parts/ads/ads', 'card-article' )?>
+  <?php get_template_part( 'template-parts/components', 'adsense-display' )?>
 
   <?php get_template_part( 'template-parts/widgets/popular-posts' ); ?>
 
   <!-- widget advertisement -->
   <div class="widget rounded text-md-center">
     <!-- <span class="ads-title">- Sponsored Ad -</span> -->
-    <?php get_template_part( 'template-parts/ads/ads', 'card-article' )?>
+    <?php get_template_part( 'template-parts/components', 'adsense-display' )?>
   </div>
 
   <?php get_template_part( 'template-parts/widgets/collection-tags' ); ?>

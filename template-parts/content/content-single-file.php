@@ -43,6 +43,8 @@
 		</ul>
 	</header><!-- .entry-header -->
 
+	<?php get_template_part( 'template-parts/components', 'adsense-display' )?>
+
 	<div class="entry-content" itemscope itemtype="https://schema.org/SoftwareApplication">
 		<amp-script layout="flex-item" src="<?= get_template_directory_uri() . '/assets/js/page-file.js' ?>">
 			<div id="download-area" class="download-area panel panel-primary">
@@ -116,6 +118,7 @@
 						</div>
 					</div>
 				</div>
+				<?php get_template_part( 'template-parts/components', 'adsense-display' )?>
 			</div>
 
 			<div id="checked-area" class="checked-area panel panel-primary d-none">
@@ -134,6 +137,7 @@
 						</div>
 					</div>
 				</div>
+				<?php get_template_part( 'template-parts/components', 'adsense-display' )?>
 			</div>
 		</amp-script>
 	
