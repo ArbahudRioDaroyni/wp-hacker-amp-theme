@@ -43,7 +43,15 @@
 		</ul>
 	</header><!-- .entry-header -->
 
-	<?php get_template_part( 'template-parts/components', 'adsense-display' )?>
+	<amp-ad width="100vw" height="320"
+		type="adsense"
+		data-ad-client="ca-pub-3780041077137992"
+		data-ad-slot="1782717232"
+		data-auto-format="rspv"
+		data-full-width="">
+		<div overflow="Memuat iklan ..."></div>
+		<div fallback>No ad for you</div>
+	</amp-ad>
 
 	<div class="entry-content" itemscope itemtype="https://schema.org/SoftwareApplication">
 		<amp-script layout="flex-item" src="<?= get_template_directory_uri() . '/assets/js/page-file.js' ?>">
@@ -118,7 +126,15 @@
 						</div>
 					</div>
 				</div>
-				<?php get_template_part( 'template-parts/components', 'adsense-display' )?>
+				<amp-ad width="100vw" height="320"
+					type="adsense"
+					data-ad-client="ca-pub-3780041077137992"
+					data-ad-slot="1782717232"
+					data-auto-format="rspv"
+					data-full-width="">
+					<div overflow="Memuat iklan ..."></div>
+					<div fallback>No ad for you</div>
+				</amp-ad>
 			</div>
 
 			<div id="checked-area" class="checked-area panel panel-primary d-none">
@@ -142,7 +158,15 @@
 						</div>
 					</div>
 				</div>
-				<?php get_template_part( 'template-parts/components', 'adsense-display' )?>
+				<amp-ad width="100vw" height="320"
+					type="adsense"
+					data-ad-client="ca-pub-3780041077137992"
+					data-ad-slot="1782717232"
+					data-auto-format="rspv"
+					data-full-width="">
+					<div overflow="Memuat iklan ..."></div>
+					<div fallback>No ad for you</div>
+				</amp-ad>
 			</div>
 		</amp-script>
 	

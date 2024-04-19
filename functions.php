@@ -32,7 +32,16 @@ function content_filter($content){
 	$replacements = [
 		'<img $1 class="img-responsive w-100 $2>',
 		'<p class="text">',
-		'<a class="btn btn-primary wp-block-button__link $1" $2 style="width:100%;padding: 1rem;margin: 1rem 0;">',
+		'<amp-ad width="100vw" height="320"
+			type="adsense"
+			data-ad-client="ca-pub-3780041077137992"
+			data-ad-slot="1782717232"
+			data-auto-format="rspv"
+			data-full-width="">
+		<div overflow="Memuat iklan ..."></div>
+		<div fallback>No ad for you</div>
+		</amp-ad>
+		<a class="btn btn-primary wp-block-button__link $1" $2 style="width:100%;padding: 1rem;margin: 1rem 0;">',
 		'<table class="table table-striped table-hover m-0">'
 	];
 	

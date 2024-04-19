@@ -19,7 +19,15 @@
 		</ul>
 	</nav>
 
-	<?php get_template_part( 'template-parts/components', 'adsense-display' )?>
+	<amp-ad width="100vw" height="320"
+		type="adsense"
+		data-ad-client="ca-pub-3780041077137992"
+		data-ad-slot="1782717232"
+		data-auto-format="rspv"
+		data-full-width="">
+		<div overflow="Memuat iklan ..."></div>
+		<div fallback>No ad for you</div>
+	</amp-ad>
 	
 	<header class="entry-header jumbotron">
 		<span class=""><a href="<?= esc_url( get_category_link( get_the_category()[0]->term_id ) ) ?>" rel="category"><?= get_the_category()[0]->name; ?></a></span>
@@ -35,7 +43,15 @@
 		</ul>
 	</header><!-- .entry-header -->
 
-	<?php get_template_part( 'template-parts/components', 'adsense-display' )?>
+	<amp-ad width="100vw" height="320"
+		type="adsense"
+		data-ad-client="ca-pub-3780041077137992"
+		data-ad-slot="1782717232"
+		data-auto-format="rspv"
+		data-full-width="">
+		<div overflow="Memuat iklan ..."></div>
+		<div fallback>No ad for you</div>
+	</amp-ad>
 
 	<div class="entry-content clearfix">
 		<?php the_content(); ?>
@@ -58,7 +74,15 @@
 		</ul>
 	</footer><!-- .entry-footer -->
 
-	<?php get_template_part( 'template-parts/components', 'adsense-display' )?>
+	<amp-ad width="100vw" height="320"
+		type="adsense"
+		data-ad-client="ca-pub-3780041077137992"
+		data-ad-slot="1782717232"
+		data-auto-format="rspv"
+		data-full-width="">
+		<div overflow="Memuat iklan ..."></div>
+		<div fallback>No ad for you</div>
+	</amp-ad>
 			
 </article><!-- #post-<?php the_ID(); ?> -->
 
