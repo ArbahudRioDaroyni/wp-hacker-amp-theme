@@ -1,0 +1,259 @@
+html {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-tap-highlight-color: $color-black;
+	height: 100%;
+	font-size: 10px;
+	height: 100%
+}
+body {
+	font-family: $font-secondary;
+	font-size: $font-size-text;
+	line-height: 1.428571429;
+	color: $color-secondary;
+	background-color: $bg-primary;
+	height: 100%;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+	display: block;
+}
+a {
+	background-color: transparent;
+  &:active,
+  &:hover {
+    outline: 0;
+  }
+}
+b,
+strong {
+	font-weight: 700;
+}
+h1 {
+	margin: 0.67em 0;
+}
+small {
+	font-size: 80%;
+}
+img {
+	border: 0;
+}
+figure {
+	margin: $margin-figure;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+	color: inherit;
+	font: inherit;
+	margin: 0;
+}
+button {
+	overflow: visible;
+}
+button,
+select {
+	text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+input {
+	line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+optgroup {
+	font-weight: bold
+}
+textarea {
+	overflow: auto;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+td,
+th {
+	padding: 0;
+}
+:after,
+:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+abbr[title] {
+	border-bottom: 1px dotted
+}
+[hidden],
+template {
+	display: none
+}
+audio,
+canvas,
+progress,
+video {
+	display: inline-block;
+	vertical-align: baseline
+}
+audio {
+	&:not([controls]) {
+		display: none;
+		height: 0
+	}
+}
+dfn {
+	font-style: italic
+}
+mark {
+	background: #ff0;
+	color: $color-black
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  &::before {
+    content: '';
+  }
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+svg {
+	&:not(:root) {
+		overflow: hidden
+	}
+}
+hr {
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	height: 0
+}
+pre,
+blockquote {
+	border: 1px solid #999;
+	page-break-inside: avoid
+}
+pre {
+	overflow: auto
+}
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em
+}
+fieldset {
+	border: 1px solid #c0c0c0;
+	margin: 0 2px;
+	padding: .35em .625em .75em
+}
+legend {
+	border: 0;
+	padding: 0
+}
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box
+}
+
+@media print {
+	*,
+	*:before,
+	*:after {
+		background: transparent;
+		color: #000;
+		box-shadow: none;
+		text-shadow: none
+	}
+	a,
+	a:visited {
+		text-decoration: underline
+	}
+	a[href]:after {
+		content: " (" attr(href) ")"
+	}
+	abbr[title]:after {
+		content: " (" attr(title) ")"
+	}
+	a[href^="#"]:after,
+	a[href^="javascript:"]:after {
+		content: ""
+	}
+	thead {
+		display: table-header-group
+	}
+	tr,
+	img {
+		page-break-inside: avoid
+	}
+	img {
+		max-width: 100%
+	}
+	p,
+	h2,
+	h3 {
+		orphans: 3;
+		widows: 3
+	}
+	h2,
+	h3 {
+		page-break-after: avoid
+	}
+	select {
+		background: $color-white
+	}
+	.navbar {
+		display: none
+	}
+	.btn>.caret,
+	.dropup>.btn>.caret {
+		border-top-color: $color-black
+	}
+	.label {
+		border: 1px solid $color-black
+	}
+	.table {
+		border-collapse: collapse
+	}
+	.table td,
+	.table th {
+		background-color: $color-white
+	}
+	.table-bordered th,
+	.table-bordered td {
+		border: 1px solid lighten($color-black, 30%)
+	}
+}

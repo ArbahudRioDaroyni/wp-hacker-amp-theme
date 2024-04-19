@@ -24,7 +24,7 @@ function content_filter($content){
 	$patterns_non_amp = []; $replacements_non_amp = [];
 
 	$patterns = [
-		'/<img ([^>]+)? class="([^>]+)?>/',
+		'/<img (.*?) class="(.*?)>/',
 		'/<p([^>]+)?>/',
 		'/<div class="wp-block-button">(.*?)<\/div>/',
 		'/wp-block-button__link/',
@@ -39,7 +39,7 @@ function content_filter($content){
 		// '/<blockquote class="(.*?)"><p>(.*?)<\/p><cite>(.*?)<\/cite><\/blockquote>/'
 	];
 	$replacements = [
-		'<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive" $1 class="img-responsive w-100 $2><div fallback>offline</div></amp-img>',
+		'<img $1 class="img-responsive w-100 $2>',
 		'<p class="text">',
 		'<p class="wp-block-button">$1</p>',
 		'btn btn-primary" style="font-family:var(--font-primary);font-size:2rem;width:100%;padding:1rem;font-size:2.25rem;font-weight:600;',
