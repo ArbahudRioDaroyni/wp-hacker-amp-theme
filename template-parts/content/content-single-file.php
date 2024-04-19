@@ -125,14 +125,19 @@
 				<div class="panel-body">
 					<div class="card-body">
 						<p class="text-center">Aplikasi aman untuk didownload, tidak ditemukan adanya virus.</p>
-						<div class="d-flex justify-content-center mt-1 <?= $x = (get_post_meta( get_the_ID(), 'dropbox', true ) == null) ? 'd-none' : '' ; ?>">
-							<a href="<?= esc_attr( get_post_meta( get_the_ID(), 'dropbox', true ) ); ?>" id="download-button" class="btn btn-primary">
-								📥&nbsp;&nbsp;Unduh Dropbox
+						<div class="d-flex justify-content-center mt-1 <?= $x = (get_post_meta( get_the_ID(), 'media-fire', true ) == null) ? 'd-none' : '' ; ?>">
+							<a href="<?= esc_attr( get_post_meta( get_the_ID(), 'media-fire', true ) ); ?>" id="download-button" class="btn btn-primary">
+								📥&nbsp;&nbsp;Media Fire (Recomended)
 							</a>
 						</div>
-						<div class="d-flex justify-content-center mt-1 <?= $x = (get_post_meta( get_the_ID(), 'googledrive', true ) == null) ? 'd-none' : '' ; ?>">
-							<a href="<?= esc_attr( get_post_meta( get_the_ID(), 'googledrive', true ) ); ?>" id="download-button" class="btn btn-primary">
-								📥&nbsp;&nbsp;Unduh Google Drive
+						<div class="d-flex justify-content-center mt-1 <?= $x = (get_post_meta( get_the_ID(), 'dropbox', true ) == null) ? 'd-none' : '' ; ?>">
+							<a href="<?= esc_attr( get_post_meta( get_the_ID(), 'dropbox', true ) ); ?>" id="download-button" class="btn btn-primary">
+								📥&nbsp;&nbsp;Dropbox
+							</a>
+						</div>
+						<div class="d-flex justify-content-center mt-1 <?= $x = (get_post_meta( get_the_ID(), 'url', true ) == null) ? 'd-none' : '' ; ?>">
+							<a href="<?= esc_attr( get_post_meta( get_the_ID(), 'url', true ) ); ?>" id="download-button" class="btn btn-primary">
+								📥&nbsp;&nbsp;Direct
 							</a>
 						</div>
 					</div>
