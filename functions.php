@@ -126,6 +126,46 @@ function amp_comment_submit(){
 add_action('wp_ajax_amp_comment_submit', 'amp_comment_submit');
 add_action('wp_ajax_nopriv_amp_comment_submit', 'amp_comment_submit');
 
+function hidePhoneNumberInText($text) {
+	// Pola regex untuk menemukan nomor telepon dalam teks
+	$phoneNumberRegex = '/(\d{6})\d{4}/';
+	// Menyamarkan nomor telepon dengan tanda bintang
+	$maskedText = preg_replace($phoneNumberRegex, '$1****', $text);
+	// Mengembalikan teks yang telah dimodifikasi
+	return $maskedText;
+}
+
+function hideUrlInText($text) {
+	// Pola regex untuk menemukan URL dalam teks
+	$urlRegex = '/(https?:\/\/)(www\.)?([a-zA-Z0-9-]+)(\.[a-zA-Z]{2,})(\/[^\s]*)?/';
+	// Menyamarkan URL dengan tanda bintang, kecuali untuk domain yang dikecualikan
+	$maskedText = preg_replace_callback($urlRegex, function($matches) {
+			$excludedDomains = array('jejakcyber.com'); // Domain yang dikecualikan dari penyembunyian
+			$domain = $matches[3] . $matches[4]; // Menggabungkan nama domain dan ekstensi
+			if (in_array($domain, $excludedDomains)) {
+					// Jika domain ada dalam daftar domain yang dikecualikan, kembalikan URL asli
+					return $matches[0];
+			} else {
+					// Jika tidak, samarkan domain dan path
+					$maskedDomain = substr($matches[3], 0, 3) . '****' . $matches[4]; // Masking nama domain
+					$maskedUrl = $matches[1] . $maskedDomain; // Menyusun URL dengan domain yang disamarkan
+					if (isset($matches[5])) {
+							$maskedUrl .= $matches[5]; // Menambahkan path jika ada
+					}
+					return $maskedUrl;
+			}
+	}, $text);
+	// Mengembalikan teks yang telah dimodifikasi
+	return $maskedText;
+}
+
+function hideTextInComment($text){
+	$phone = hidePhoneNumberInText($text);
+	$url = hideUrlInText($phone);
+
+	return $url;
+}
+
 include 'inc/get-view-count.php';
 include 'inc/comments.php';
 include 'inc/disable-feed.php';

@@ -20,24 +20,26 @@ function comment_list($comment, $args, $depth) {
 			<div id="img-comment-<?php comment_ID(); ?>" class="thumb-comment">
 				<?= get_avatar( $comment, null, null, get_comment_author(), $args['avatar-args'] ); ?>
 			</div>
-			<div id="author-comment-<?php comment_ID(); ?>" class="author">
-				<span class="vcard h6"><a rel="nofollow" href="<?= get_comment_author() ?>" class="fn name"><?= get_comment_author() ?></a></span>
+			<div id="author-comment-<?php comment_ID(); ?>" class="author vcard h6">
+				<span class="fn name"><?= get_comment_author() ?></span>
 			</div>
 			<div id="date-comment-<?php comment_ID(); ?>">
-				<a rel="nofollow" href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>">
-					<span class="date"><?php 
-					/* translators: 1: date, 2: time */
-					printf( 
-							__('%1$s at %2$s'),
-							get_comment_date(),
-							get_comment_time() 
-					); ?></span>
-				</a>
+        <span class="date <?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>">
+          <?php 
+            /* translators: 1: date, 2: time */
+            printf( 
+                __('%1$s at %2$s'),
+                get_comment_date(),
+                get_comment_time() 
+            );
+          ?>
+        </span>
 			</div>
 		</div>
     
     <div class="body-comment-<?php comment_ID(); ?>">
-      <?php comment_text(); ?>
+      <?php // comment_text(); ?>
+      <?php echo '<p>' . hideTextInComment( get_comment_text() ) . '</p>'; ?>
       <?php if ( $comment->comment_approved == '0' ) { ?>
         <em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.' ); ?></em><br/><?php 
       } ?>
@@ -50,7 +52,7 @@ function comment_list($comment, $args, $depth) {
           'add_below' => $add_below, 
           'depth'     => $depth, 
           'max_depth' => $args['max_depth'],
-          'reply_text' => 'Reply'
+          'reply_text' => __( 'Reply' )
         ) 
       )
     ); ?>
@@ -110,7 +112,7 @@ function the_comment_form( $args = array('format' => 'html5'), $post_id = null )
         'url'    => sprintf(
             '<div class="column col-md-6"><div class="form-group">%s</div></div>',
             sprintf(
-                '<input id="url" class="form-control" name="url" %s value="%s" placeholder="Website" size="30" maxlength="200" />',
+                '<input id="url" class="form-control" name="url" %s value="%s" placeholder="Website diawali dengan https://" size="30" maxlength="200" />',
                 ( $html5 ? 'type="url"' : 'type="text"' ),
                 esc_attr( $commenter['comment_author_url'] )
             )
@@ -118,7 +120,7 @@ function the_comment_form( $args = array('format' => 'html5'), $post_id = null )
         'author' => sprintf(
             '<div class="column col-md-12"><div class="form-group">%s</div></div>',
             sprintf(
-                '<input id="author" class="form-control" name="author" type="text" value="%s" placeholder="Name *" size="30" maxlength="245"%s />',
+                '<input id="author" class="form-control" name="author" type="text" value="%s" placeholder="Nama *" size="30" maxlength="245"%s />',
                 esc_attr( $commenter['comment_author'] ),
                 $html_req
             )
@@ -146,11 +148,11 @@ function the_comment_form( $args = array('format' => 'html5'), $post_id = null )
         }
     }
  
-    // $required_text = sprintf(
-    //     /* translators: %s: Asterisk symbol (*). */
-    //     ' ' . __( 'Required fields are marked %s' ),
-    //     '<span class="required">*</span>'
-    // );
+    $required_text = sprintf(
+        /* translators: %s: Asterisk symbol (*). */
+        ' ' . __( 'Required fields are marked %s' ),
+        '<span class="required">*</span>'
+    );
  
     /**
      * Filters the default comment form fields.
@@ -206,7 +208,7 @@ function the_comment_form( $args = array('format' => 'html5'), $post_id = null )
         'name_submit'          => 'submit',
         'title_reply'          => '<span><span class="text-main-1">'.__( 'Tinggalkan' ).'</span>'.__( ' Balasan' ).'</span>',
         /* translators: %s: Author of the comment being replied to. */
-        'title_reply_to'       => __( 'Leave a Reply to %s' ),
+        'title_reply_to'       => __( 'Leave a Reply to %s' ) . ' ',
         'title_reply_before'   => '<h3 id="reply-title" class="comment-reply-title section-title mb-2">',
         'title_reply_after'    => '</h3>',
         'cancel_reply_before'  => '<small>',
@@ -440,9 +442,10 @@ function the_comment_form( $args = array('format' => 'html5'), $post_id = null )
  
             echo '
               </div>
-                <div submit-error><template type="amp-mustache">{{msg}}</template></div>
-                <div submit-success><template type="amp-mustache">
-                <p>{{msg}}</p>
+              <div submit-error><template type="amp-mustache">{{msg}}</template></div>
+              <div submit-success>
+                <template type="amp-mustache">
+                  <p>{{msg}}</p>
                   <ul id="comments-list" class="comments-list comments p-0">
                     <li class="comment byuser comment-author-{{data.comment_author}} bypostauthor even thread-even depth-1 list-unstyled children" id="comment-{{data.comment_ID}}">
                       <div class="header-comment">
@@ -455,7 +458,8 @@ function the_comment_form( $args = array('format' => 'html5'), $post_id = null )
                     </li>
                   </ul>
                   <p>Komentar dalam moderasi</p>
-                </template></div>
+                </template>
+              </div>
             </form></div>';
  
         endif;
