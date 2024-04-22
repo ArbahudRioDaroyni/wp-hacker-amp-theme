@@ -24,14 +24,10 @@ function content_filter($content){
 	$patterns_non_amp = []; $replacements_non_amp = [];
 
 	$patterns = [
-		'/<img (.*?) class="(.*?)>/',
-		'/<p([^>]+)?>/',
 		'/<a class="wp-block-button__link (.*?)" (.*?)>/',
 		'/<table([^>]+)?>/',
 	];
 	$replacements = [
-		'<img $1 class="img-responsive w-100 $2>',
-		'<p class="text">',
 		'<amp-ad width="100vw" height="320"
 			type="adsense"
 			data-ad-client="ca-pub-3780041077137992"

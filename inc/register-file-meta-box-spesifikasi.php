@@ -33,7 +33,7 @@ function meta_box_spesifikasi_callback( $post ) {
 		</style>
 		<p class="meta-options meta_field">
 			<label for="name">Nama :</label>
-			<input id="name" type="text" name="name" value="<?php echo esc_attr( get_post_meta( $post->ID, 'name', true ) ); ?>" placeholder="nama-file.apk">
+			<input id="name" type="text" name="name" value="<?php echo esc_attr( get_post_meta( $post->ID, 'name', true ) ); ?>" placeholder="nama-aplikasi.apk">
 		</p>
 		<p class="meta-options meta_field">
 			<label for="publisher">Publisher :</label>
@@ -44,12 +44,16 @@ function meta_box_spesifikasi_callback( $post ) {
 			<input id="version" type="text" name="version" value="<?php echo esc_attr( get_post_meta( $post->ID, 'version', true ) ); ?>" placeholder="2.3.1">
 		</p>
 		<p class="meta-options meta_field">
-			<label for="googledrive">Google Drive :</label>
-			<input id="googledrive" type="text" name="googledrive" value="<?php echo esc_attr( get_post_meta( $post->ID, 'googledrive', true ) ); ?>" placeholder="https://drive.google.com/file/d/1_WOCfxiShCoj3zJ9JFS2f4wY2KNdYUyD/view?usp=sharing">
+			<label for="url">URL :</label>
+			<input id="url" type="text" name="url" value="<?php echo esc_attr( get_post_meta( $post->ID, 'url', true ) ); ?>" placeholder="https://drive.google.com/file/d/1_WOCfxiShCoj3zJ9JFS2f4wY2KNdYUyD/view?usp=sharing">
 		</p>
 		<p class="meta-options meta_field">
 			<label for="dropbox">Dropbox :</label>
 			<input id="dropbox" type="text" name="dropbox" value="<?php echo esc_attr( get_post_meta( $post->ID, 'dropbox', true ) ); ?>" placeholder="https://www.dropbox.com/scl/fo/pnhwhqq4g6ui299u4ps9c/h?dl=0&rlkey=gzz0clp3zjdns93uh9qpbwupt">
+		</p>
+		<p class="meta-options meta_field">
+			<label for="media-fire">Media Fire :</label>
+			<input id="media-fire" type="text" name="media-fire" value="<?php echo esc_attr( get_post_meta( $post->ID, 'media-fire', true ) ); ?>" placeholder="xxhttps://www.mediafire.com/file/kkzxbdcaw795wjs/Bellara_VIP_v22_JejakCyber.apk/file">
 		</p>
 		<p class="meta-options meta_field">
 			<label for="size">Ukuran File :</label>
@@ -103,8 +107,9 @@ function save_meta_box_spesifikasi_data( $post_id ) {
 		'version',
 		'size',
 		'android-version',
-		'googledrive',
+		'url',
 		'dropbox',
+		'media-fire',
 	];
 	foreach ( $fields as $field ) {
 			if ( array_key_exists( $field, $_POST ) ) {
@@ -112,5 +117,6 @@ function save_meta_box_spesifikasi_data( $post_id ) {
 			}
 	}
 }
+
 
 add_action( 'save_post', 'save_meta_box_spesifikasi_data' );

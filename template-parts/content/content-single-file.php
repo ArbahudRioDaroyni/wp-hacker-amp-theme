@@ -151,9 +151,9 @@
 								📥&nbsp;&nbsp;Dropbox
 							</a>
 						</div>
-						<div class="d-flex justify-content-center mt-1 <?= $x = (get_post_meta( get_the_ID(), 'url', true ) == null) ? 'd-none' : '' ; ?>">
+						<div class="d-flex justify-content-center mt-1 <?= $x = (get_post_meta( get_the_ID(), 'googledrive', true ) == null) ? 'd-none' : '' ; ?>">
 							<a href="<?= esc_attr( get_post_meta( get_the_ID(), 'url', true ) ); ?>" id="download-button" class="btn btn-primary">
-								📥&nbsp;&nbsp;Direct
+								📥&nbsp;&nbsp;Google Drive
 							</a>
 						</div>
 					</div>

@@ -442,7 +442,9 @@ function the_comment_form( $args = array('format' => 'html5'), $post_id = null )
  
             echo '
               </div>
-              <div submit-error><template type="amp-mustache">{{msg}}</template></div>
+              <div submit-error>
+                <template type="amp-mustache">{{msg}}</template>
+              </div>
               <div submit-success>
                 <template type="amp-mustache">
                   <p>{{msg}}</p>
@@ -454,10 +456,9 @@ function the_comment_form( $args = array('format' => 'html5'), $post_id = null )
                         <div id="date-comment-{{data.comment_ID}}"><a rel="nofollow" href="https://jejakhacker.com/jasa-hack-back-akun-ml/#comment-{{data.comment_ID}}"><span class="date">{{data.comment_date}}</span></a></div>
                       </div>
                       <div class="body-comment-{{data.comment_ID}}"><p>{{data.comment_content}}</p></div>
-                      <a rel="nofollow" class="comment-reply-link btn btn-primary" href="#comment-{{data.comment_ID}}" data-commentid="{{data.comment_ID}}" data-postid="38" data-belowelement="div-comment-{{data.comment_ID}}" data-respondelement="respond" data-replyto="Balasan untuk {{data.comment_author}}" aria-label="Balasan untuk {{data.comment_author}}">Reply</a>
                     </li>
                   </ul>
-                  <p>Komentar dalam moderasi</p>
+                  <p>Komentar Anda dalam moderasi</p>
                 </template>
               </div>
             </form></div>';
