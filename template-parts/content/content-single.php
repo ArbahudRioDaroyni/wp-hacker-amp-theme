@@ -11,20 +11,12 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class("is-single"); ?>>
 
-	<nav>
-		<ul class="breadcrumb">
-			<li><a href="<?= home_url() ?>">Halaman Depan</a></li>
-			<li><a href="<?= esc_url( get_category_link( get_the_category()[0]->term_id ) ) ?>" rel="category"><?= get_the_category()[0]->name; ?></a></li>
-			<li class="active"><?php the_title(); ?></li>
-		</ul>
-	</nav>
-
 	<amp-ad width="100vw" height="320"
 		type="adsense"
 		data-ad-client="ca-pub-3780041077137992"
 		data-ad-slot="1782717232"
 		data-auto-format="rspv"
-		data-full-width="">
+		data-full-width="true">
 		<div overflow="Memuat iklan ..."></div>
 		<div fallback>No ad for you</div>
 	</amp-ad>

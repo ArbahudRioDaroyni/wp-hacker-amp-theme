@@ -37,7 +37,7 @@ function content_filter($content){
 		<div overflow="Memuat iklan ..."></div>
 		<div fallback>No ad for you</div>
 		</amp-ad>
-		<a class="btn btn-primary wp-block-button__link $1" $2 style="width:100%;padding: 1rem;margin: 1rem 0;">',
+		<a class="btn btn-primary btn-block wp-block-button__link $1" $2>',
 		'<table class="table table-striped table-hover m-0">'
 	];
 	

@@ -20,14 +20,6 @@
 
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class("is-single"); ?>>
-
-	<nav>
-		<ul class="breadcrumb">
-			<li><a href="<?= home_url() ?>">Halaman Depan</a></li>
-			<li><a href="<?= esc_url( get_category_link( get_the_category()[0]->term_id ) ) ?>" rel="category"><?= get_the_category()[0]->name; ?></a></li>
-			<li class="active"><?php the_title(); ?></li>
-		</ul>
-	</nav>
 			
 	<header class="entry-header jumbotron">
 		<span class=""><a href="<?= esc_url( get_category_link( get_the_category()[0]->term_id ) ) ?>" rel="category"><?= get_the_category()[0]->name; ?></a></span>

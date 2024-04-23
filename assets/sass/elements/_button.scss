@@ -1,7 +1,7 @@
 .btn {
   display: inline-block;
-  margin-bottom: 0;
-  font-weight: 400;
+  margin: $marginy-1;
+  // font-weight: 400;
   text-align: center;
   vertical-align: middle;
   touch-action: manipulation;
@@ -9,16 +9,15 @@
   background-image: none;
   border: 1px solid transparent;
   white-space: nowrap;
-  padding: 6px 12px;
-  font-size: 14px;
+  padding: $padding-1 - 0.3rem;
   line-height: 1.428571429;
   border-radius: 0;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: $bg-primary;
-  background-color: lighten($bg-primary, 30%);
+  color: $background-primary;
+  background-color: lighten($background-primary, 30%);
 
   &.active, &:active {
     outline: 0;
@@ -29,7 +28,7 @@
 }
 
 .btn-primary {
-  color: $bg-primary;
+  color: $background-primary;
   background-color: $color-primary;
 
   &.active,
@@ -37,7 +36,7 @@
   &:active,
   &:focus,
   &:hover{
-    color: $bg-primary;
+    color: $background-primary;
     background-color: darken($color-primary, 10%);
   }
 
