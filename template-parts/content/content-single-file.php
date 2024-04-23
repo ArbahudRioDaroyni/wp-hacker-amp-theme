@@ -228,7 +228,7 @@
 						</div>
 						<div id="deskripsi" class="mb-3">
 							<h4>Deskripsi</h4>
-							<div id="content-description">
+							<div id="content-description" class="entry-content">
 								<?php the_content(); ?>
 							</div>
 							<button id="btn-description-hide" class="btn btn-primary" on="tap:content-description.hide,btn-description-hide.hide,btn-description-show.show">Sembunyikan deskripsi</button>
