@@ -10,7 +10,7 @@
 get_header(); ?>
 
 <div class="container">
-  <div id="primary" class="content-area row">
+  <div id="primary" class="content row">
 
     <nav>
       <ul class="breadcrumb">
