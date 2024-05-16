@@ -2,9 +2,9 @@
 /**
  * The template for displaying 404 page
  *
- * @package Randd
- * @subpackage Randd_Soft_v2
- * @since Randd Soft 2.0
+ * @package Hacker_AMP_Theme
+ * @subpackage Hacker_AMP_Theme
+ * @since Hacker AMP Theme 1.0
  */
 
 get_header(); ?>

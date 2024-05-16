@@ -23,7 +23,7 @@
 	
 	<header class="entry-header jumbotron">
 		<span class=""><a href="<?= esc_url( get_category_link( get_the_category()[0]->term_id ) ) ?>" rel="category"><?= get_the_category()[0]->name; ?></a></span>
-		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+		<h1 class="entry-title"><?php the_title(); ?></h1>
 		<ul class="entry-meta list-inline align-items-center">
 			<li class="vcard">
 				<img src="<?= get_avatar_url($comment, null) ?>" alt="<?php echo esc_attr( get_the_author() ); ?>" class="" width="35" height="35">

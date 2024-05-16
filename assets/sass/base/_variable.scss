@@ -14,11 +14,19 @@ $background-primary: #222222;
 $color-primary: #00ff00;
 $color-secondary: #9f9f9f;
 $color-green: #00dd00;
+$color-purple: #7d8cff;
 $color-blue: #10e3ff;
-$color-yellow: #e5ff00;
+$color-yellow: #f4ff00;
 $color-red: #dd0000;
 $color-black: #000000;
 $color-white: #ffffff;
+
+$colors: (
+  success: $color-green,
+  info: $color-purple,
+  warning: $color-yellow,
+  danger: $color-red
+);
 
 $line-height: 1.428571429;
 

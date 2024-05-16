@@ -1,0 +1,52 @@
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 0;
+
+  h4 {
+    margin-top: 0;
+    color: inherit;
+  }
+
+  .alert-link {
+    font-weight: 700;
+  }
+
+  > p,
+  > ul {
+    margin-bottom: 0;
+  }
+
+  > p + p {
+    margin-top: 5px;
+  }
+}
+
+@each $key, $value in $colors {
+  .alert-#{$key} {
+    background-color: lighten($color-black, 20%);
+    border-color: lighten($color-black, 15%);
+    color: $value;
+
+    hr {
+      border-top-color: lighten($color-black, 30%);
+    }
+
+    .alert-link {
+      color: darken($value, 10%);
+    }
+  }
+}
+
+.alert-dismissable,
+.alert-dismissible {
+  padding-right: 35px;
+
+  &.close {
+    position: relative;
+    top: -2px;
+    right: -21px;
+    color: inherit;
+  }
+}

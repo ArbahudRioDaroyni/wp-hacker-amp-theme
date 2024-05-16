@@ -5,9 +5,9 @@
  * The area of the page that contains both current comments
  * and the comment form.
  *
- * @package WordPress
- * @subpackage Game_Portal
- * @since Game Portal 1.0
+ * @package Hacker_AMP_Theme
+ * @subpackage Hacker_AMP_Theme
+ * @since Hacker AMP Theme 1.0
  */
 
 /*
@@ -25,22 +25,11 @@ if ( post_password_required() ) {
 	<?php if ( have_comments() ) : ?>
 		<h3 class="section-title mb-4"><span><span class="text-main">Komentar</span> Terbaru</span></h3>
 
-		<?php the_comments_navigation(); ?>
-
 		<ul id="comments-list" class="comments-list comments p-0">
-			<?php
-				wp_list_comments([
-					'type'							=> 'comment',
-					// 'max_depth'					=> 1,
-					'per_page'					=> 50,
-					'reverse_top_level'	=> true,
-					'avatar_size'				=> 35,
-					'callback'					=> 'comment_list'
-				]);
-			?>
+			<?php display_comments_list(); ?>
 		</ul><!-- .comment-list -->
-
-		<?php the_comments_navigation(); ?>
+		
+		<?php display_comments_pagination(); ?>
 
 	<?php endif; // Check for have_comments(). ?>
 

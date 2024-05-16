@@ -1,0 +1,29 @@
+.jumbotron {
+  padding: $size-1*2 $size-1;
+  margin-bottom: $size-1*2;
+  color: inherit;
+  background-color: #080808;
+  border-radius: 0;
+
+  .h1, h1 {
+    color: inherit;
+  }
+  p {
+    margin-bottom: $size-1;
+    font-size: 21px;
+    font-weight: 200;
+  }
+  > hr {
+    border-top-color: #000;
+  }
+}
+
+@include breakpoint(md) {
+  .jumbotron {
+    padding: $size-1*3 $size-1*2.5;
+  }
+  .jumbotron .h1,
+  .jumbotron h1 {
+    font-size: 63px;
+  }
+}
