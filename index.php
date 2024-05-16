@@ -4,9 +4,11 @@
   *
   * Displays all of the element and everything up until the "content-area" div.
   *
-  * @package Jejak Hacker
-  * @subpackage jejak_hacker
+  * @link https://github.com/ArbahudRioDaroyni/wp-hacker-amp-theme
+  * @package Hacker_AMP_Theme
+  * @subpackage Hacker_AMP_Theme
   * @since 1.0.1
+  *
   */
   
 get_header();

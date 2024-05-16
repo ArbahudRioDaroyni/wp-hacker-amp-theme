@@ -2,20 +2,10 @@
 /**
  * The template for displaying all single posts and attachments
  *
- * @package Jejak Hacker
- * @subpackage jejak_hacker
- * @since 1.01
- */
-
-?>
-<?php
-/**
- * The template for displaying all page
- *
- * @link https://jejakhacker.com/
- * @package Jejak Hacker
- * @subpackage jejak_hacker
- * @since 1.01
+ * @link https://github.com/ArbahudRioDaroyni/wp-hacker-amp-theme
+ * @package Hacker_AMP_Theme
+ * @subpackage Hacker_AMP_Theme
+ * @since 1.0.1
  */
 
 ?>

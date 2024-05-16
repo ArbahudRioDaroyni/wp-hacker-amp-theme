@@ -2,9 +2,9 @@
 /**
  * The template for displaying all tag pages
  *
- * @link https://jejakhacker.com/
- * @package Jejak Hacker
- * @subpackage wp_jejak_hacker
+ * @link https://github.com/ArbahudRioDaroyni/wp-hacker-amp-theme
+ * @package Hacker_AMP_Theme
+ * @subpackage Hacker_AMP_Theme
  * @since 1.0.1
  */
 

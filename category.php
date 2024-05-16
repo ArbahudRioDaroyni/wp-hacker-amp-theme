@@ -2,9 +2,10 @@
 /**
  * The template for displaying all category pages
  *
- * @package Randd
- * @subpackage Randd_Soft_v2
- * @since Randd Soft 2.0
+ * @link https://github.com/ArbahudRioDaroyni/wp-hacker-amp-theme
+ * @package Hacker_AMP_Theme
+ * @subpackage Hacker_AMP_Theme
+ * @since 1.0.1
  */
 
 get_header(); ?>

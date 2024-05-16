@@ -5,9 +5,10 @@
  * The area of the page that contains both current comments
  * and the comment form.
  *
+ * @link https://github.com/ArbahudRioDaroyni/wp-hacker-amp-theme
  * @package Hacker_AMP_Theme
  * @subpackage Hacker_AMP_Theme
- * @since Hacker AMP Theme 1.0
+ * @since 1.0.1
  */
 
 /*
