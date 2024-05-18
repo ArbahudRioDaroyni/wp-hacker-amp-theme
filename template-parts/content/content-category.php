@@ -12,10 +12,10 @@
 
 <?php
 $args = [
-	'posts_per_page'  => 8,
-	'paged'           => ( get_query_var('paged') ) ? get_query_var('paged' ) : 1,
-	'post_type'       => ['post', 'file'],
-	'category_name'   => get_the_category_by_ID(get_query_var('cat'))
+	'posts_per_page'	=> 8,
+	'paged'						=> ( get_query_var('paged') ) ? get_query_var('paged' ) : 1,
+	'post_type'				=> ['post', 'file'],
+	'category_name'		=> get_the_category_by_ID(get_query_var('cat'))
 ];
 $postslist = new WP_Query( $args );
 		
@@ -41,14 +41,14 @@ if ( $postslist->have_posts() ) : ?>
 
 <!-- START: Pagination -->
 <?php $pages = paginate_links( [
-	'base'        => get_pagenum_link(1) . '%_%',
-	'format'      => 'page/%#%',
-	'current'     => max(1, get_query_var('paged')),
-	'end_size'    => 2,
-	'total'       => ceil( $postslist->found_posts / $args['posts_per_page'] ),
-	'prev_text'   => __(' << '),
-	'next_text'   => __(' >> '),
-	'type'        => 'array',
+	'base'				=> get_pagenum_link(1) . '%_%',
+	'format'			=> 'page/%#%',
+	'current'			=> max(1, get_query_var('paged')),
+	'end_size'		=> 2,
+	'total'				=> ceil( $postslist->found_posts / $args['posts_per_page'] ),
+	'prev_text'		=> __(' << '),
+	'next_text'		=> __(' >> '),
+	'type'				=> 'array',
 ]); ?>
 
 <?php if( is_array( $pages ) ) { ?>

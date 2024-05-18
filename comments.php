@@ -22,7 +22,7 @@ if ( post_password_required() ) {
 ?>
 
 <div id="comments" class="comments-area comments-articles">
-    
+
 	<?php if ( have_comments() ) : ?>
 		<h3 class="section-title mb-4"><span><span class="text-main">Komentar</span> Terbaru</span></h3>
 

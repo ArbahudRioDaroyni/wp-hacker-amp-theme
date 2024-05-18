@@ -39,7 +39,7 @@ function comment_list($comment, $args, $depth) {
     
     <div class="body-comment-<?php comment_ID(); ?>">
       <?php // comment_text(); ?>
-      <?php echo '<p>' . hideSensitiveDataInText( get_comment_text() ) . '</p>'; ?>
+      <?php echo '<p>' . hide_sensitive_data_in_text( get_comment_text() ) . '</p>'; ?>
       <?php if ( $comment->comment_approved == '0' ) { ?>
         <em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.' ); ?></em><br/><?php 
       } ?>

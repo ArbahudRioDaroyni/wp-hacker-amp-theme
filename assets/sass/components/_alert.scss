@@ -1,8 +1,8 @@
 .alert {
-  padding: 15px;
-  margin-bottom: 20px;
-  border: 1px solid transparent;
+  padding: $size-1 * 1.5;
+  margin-bottom: $size-1 * 2;
   border-radius: 0;
+  background-color: $color-black;
 
   h4 {
     margin-top: 0;
@@ -10,7 +10,7 @@
   }
 
   .alert-link {
-    font-weight: 700;
+    font-weight: bold;
   }
 
   > p,
@@ -25,8 +25,6 @@
 
 @each $key, $value in $colors {
   .alert-#{$key} {
-    background-color: lighten($color-black, 20%);
-    border-color: lighten($color-black, 15%);
     color: $value;
 
     hr {
@@ -43,7 +41,7 @@
 .alert-dismissible {
   padding-right: 35px;
 
-  &.close {
+  .close {
     position: relative;
     top: -2px;
     right: -21px;

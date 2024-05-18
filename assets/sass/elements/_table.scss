@@ -1,71 +1,86 @@
 table {
   background-color: transparent;
 }
+
 th {
   text-align: left;
 }
+
 .table {
   width: 100%;
   max-width: 100%;
   margin-bottom: $size-1;
 
-  > tbody > tr > td, > tbody > tr > th,
-  > tfoot > tr > td, > tfoot > tr > th,
-  > thead > tr > td, > thead > tr > th {
-    padding: 8px;
-    line-height: 1.428571429;
-    vertical-align: top;
-    border-top: 1px solid lighten($color-black, 30%);
+  > tbody, > tfoot, > thead {
+    > tr {
+      > td, > th {
+        padding: 8px;
+        line-height: 1.428571429;
+        vertical-align: top;
+        border-top: 1px solid lighten($color-black, 30%);
+      }
+    }
   }
-  > thead > tr > th {
-    vertical-align: bottom;
-    border-bottom: 2px solid lighten($color-black, 30%)
+
+  > thead {
+    > tr {
+      > th {
+        vertical-align: bottom;
+        border-bottom: 2px solid lighten($color-black, 30%);
+      }
+    }
   }
-  > caption + thead > tr:first-child > td,
-  > caption + thead > tr:first-child > th,
-  > colgroup + thead > tr:first-child > td,
-  > colgroup + thead > tr:first-child > th,
-  > thead:first-child > tr:first-child > td,
-  > thead:first-child > tr:first-child > th {
-    border-top: 0;
+
+  > caption + thead, > colgroup + thead, > thead:first-child {
+    > tr:first-child {
+      > td, > th {
+        border-top: 0;
+      }
+    }
   }
 }
 
 .table-bordered {
   border: 1px solid #454545;
 
-  > tbody > tr > td,
-  > tbody > tr > th,
-  > tfoot > tr > td,
-  > tfoot > tr > th,
-  > thead > tr > td,
-  > thead > tr > th {
-    border: 1px solid #444;
+  > tbody, > tfoot, > thead {
+    > tr {
+      > td, > th {
+        border: 1px solid #444;
+      }
+    }
   }
 
-  > thead > tr > td,
-  > thead > tr > th {
-    border-bottom-width: 2px;
+  > thead {
+    > tr {
+      > td, > th {
+        border-bottom-width: 2px;
+      }
+    }
   }
 }
 
 .table-striped {
-  > tbody > tr:nth-of-type(odd) {
-    background-color: #080808;
+  > tbody {
+    > tr:nth-of-type(odd) {
+      background-color: #080808;
+    }
   }
 }
-.table-hover{
-  > tbody > tr:hover {
-    background-color: #030;
+
+.table-hover {
+  > tbody {
+    > tr:hover {
+      background-color: #030;
+    }
   }
 }
+
 .table-responsive {
   overflow-x: auto;
   min-height: 0.01%;
-}
 
-@include breakpoint(md) {
-  .table-responsive {
+  @include breakpoint(md) {
     width: 100%;
     margin-bottom: 15px;
     overflow-y: hidden;
@@ -74,44 +89,37 @@ th {
 
     > .table {
       margin-bottom: 0;
-    }
 
-    > .table > tbody > tr > td,
-    > .table > tbody > tr > th,
-    > .table > tfoot > tr > td,
-    > .table > tfoot > tr > th,
-    > .table > thead > tr > td,
-    > .table > thead > tr > th {
-      white-space: nowrap;
-    }
+      > tbody, > tfoot, > thead {
+        > tr {
+          > td, > th {
+            white-space: nowrap;
+          }
+        }
+      }
 
-    > .table-bordered {
-      border: 0;
-    }
+      > .table-bordered {
+        border: 0;
 
-    > .table-bordered > tbody > tr > td:first-child,
-    > .table-bordered > tbody > tr > th:first-child,
-    > .table-bordered > tfoot > tr > td:first-child,
-    > .table-bordered > tfoot > tr > th:first-child,
-    > .table-bordered > thead > tr > td:first-child,
-    > .table-bordered > thead > tr > th:first-child {
-      border-left: 0;
-    }
+        > tbody, > tfoot, > thead {
+          > tr {
+            > td:first-child, > th:first-child {
+              border-left: 0;
+            }
+            > td:last-child, > th:last-child {
+              border-right: 0;
+            }
+          }
+        }
 
-    > .table-bordered > tbody > tr > td:last-child,
-    > .table-bordered > tbody > tr > th:last-child,
-    > .table-bordered > tfoot > tr > td:last-child,
-    > .table-bordered > tfoot > tr > th:last-child,
-    > .table-bordered > thead > tr > td:last-child,
-    > .table-bordered > thead > tr > th:last-child {
-      border-right: 0;
-    }
-
-    > .table-bordered > tbody > tr:last-child > td,
-    > .table-bordered > tbody > tr:last-child > th,
-    > .table-bordered > tfoot > tr:last-child > td,
-    > .table-bordered > tfoot > tr:last-child > th {
-      border-bottom: 0;
+        > tbody, > tfoot {
+          > tr:last-child {
+            > td, > th {
+              border-bottom: 0;
+            }
+          }
+        }
+      }
     }
   }
 }

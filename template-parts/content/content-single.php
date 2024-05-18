@@ -20,6 +20,8 @@
 		<div overflow="Memuat iklan ..."></div>
 		<div fallback>No ad for you</div>
 	</amp-ad>
+
+	<?php echo generate_table_of_contents(); ?>
 	
 	<header class="entry-header jumbotron">
 		<span class=""><a href="<?= esc_url( get_category_link( get_the_category()[0]->term_id ) ) ?>" rel="category"><?= get_the_category()[0]->name; ?></a></span>
@@ -34,6 +36,8 @@
 			</li>
 		</ul>
 	</header><!-- .entry-header -->
+
+	
 
 	<amp-ad width="100vw" height="320"
 		type="adsense"
