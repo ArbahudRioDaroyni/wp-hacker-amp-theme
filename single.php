@@ -32,11 +32,9 @@
 		<?php get_sidebar(); ?>
 		<!-- END: Sidebar -->
 
-		<section class="col-lg-12 mt-2">
-			<!-- START: Comments -->
-			<?php comments_template( '/comments.php' ); ?>
-			<!-- END: Comments -->
-		</section>
+		<!-- START: Comments -->
+		<?php comments_template( '/comments.php' ); ?>
+		<!-- END: Comments -->
 	</div><!-- .content-area -->
 </div>
 <?php get_footer(); ?>
