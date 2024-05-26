@@ -1,0 +1,42 @@
+.table-of-contents {
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+
+      &::before {
+        content: "├─";
+      }
+
+      &:last-child::before {
+        content: "└─";
+      }
+
+      $space: "|\00a0\00a0";
+      $tag: "ul li";
+
+      @for $i from 1 through 4 {
+        #{$tag} {
+          &::before {
+            content: $space + "├─";
+          }
+          &:last-child::before {
+            content: $space + "└─";
+          }
+        }
+        $space: $space + "|\00a0\00a0";
+        $tag: $tag + " ul li";
+      }
+
+      a {
+        padding-left: .3rem;
+
+        &::before {
+          content: "./";
+          color: $color-yellow;
+        }
+      }
+    }
+  }
+}

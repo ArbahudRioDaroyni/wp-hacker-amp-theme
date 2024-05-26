@@ -1,0 +1,81 @@
+table {
+  background-color: transparent;
+}
+
+th {
+  text-align: left;
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: $size-1;
+  background-color: $color-black;
+  display: block;
+
+  > tbody, > tfoot, > thead {
+    > tr {
+      > td, > th {
+        padding: 8px;
+        line-height: 1.428571429;
+        vertical-align: top;
+        border: dashed 2px $color-white;
+        margin: 0;
+      }
+    }
+  }
+
+  > thead {
+    > tr {
+      > th {
+        vertical-align: bottom;
+        padding-bottom: 1.5rem;
+      }
+    }
+  }
+
+  > tfoot {
+    > tr {
+      > td, > th {
+        vertical-align: top;
+        padding-top: 1.5rem;
+      }
+    }
+  }
+
+  > caption + thead, > colgroup + thead {
+    > tr:first-child {
+      > td, > th {
+        border-top: 0;
+      }
+    }
+  }
+
+  &-hover{
+    > tbody {
+      > tr:hover, tr:nth-of-type(odd):hover {
+        background-color: lighten($color-black, 20%);
+      }
+    }
+  }
+  &-striped {
+    > tbody { 
+      > tr:nth-of-type(odd) {
+        background-color: lighten($color-black, 10%);
+      }
+    }
+  }
+  &-responsive {
+    overflow-x: auto;
+    min-height: 0.01%;
+    
+
+    @include breakpoint(md) {
+      width: 100%;
+      margin-bottom: 15px;
+      overflow-y: hidden;
+      -ms-overflow-style: -ms-autohiding-scrollbar;
+      display: inline-table;
+    }
+  }
+}

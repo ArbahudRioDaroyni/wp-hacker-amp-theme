@@ -1,0 +1,339 @@
+
+@import 'base/variable';
+@import 'partials/mixins';
+@import 'vendors/font';
+@import 'base/normalize';
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @include breakpoint(md) {
+    width: 750px;
+  }
+  @include breakpoint(lg) {
+    width: 970px;
+  }
+  @include breakpoint(xl) {
+    width: 1170px;
+  }
+}
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+li::marker {
+  color: $color-red;
+}
+.text::after {
+  content: "_";
+  animation: blinker 1s linear infinite;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+a {
+  color: $color-green;
+  text-decoration: none;
+  
+  &:focus,
+  &:hover {
+  filter: brightness(75%);
+  text-decoration: underline;
+  }
+}
+
+img {
+  vertical-align: middle;
+}
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #3c3c3c;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+[role="button"] {
+  cursor: pointer;
+}
+
+p,
+ol,
+ul {
+  margin: 0 0 2rem;
+}
+.small,
+small {
+  font-size: 85%;
+}
+.text-center {
+  text-align: center;
+}
+ol, ul {
+  ol, ul {
+    margin-bottom: 0;
+  }
+
+}
+
+
+blockquote {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-size: 17.5px;
+  border-left: 5px solid #030;
+}
+blockquote ol:last-child,
+blockquote p:last-child,
+blockquote ul:last-child {
+  margin-bottom: 0;
+}
+blockquote .small,
+blockquote footer,
+blockquote small {
+  display: block;
+  font-size: 80%;
+  line-height: 1.428571429;
+  color: #030;
+}
+blockquote .small:before,
+blockquote footer:before,
+blockquote small:before {
+  content: "\2014 \00A0";
+}
+.blockquote-reverse,
+blockquote.pull-right {
+  padding-right: 15px;
+  padding-left: 0;
+  border-right: 5px solid #030;
+  border-left: 0;
+  text-align: right;
+}
+.blockquote-reverse .small:before,
+.blockquote-reverse footer:before,
+.blockquote-reverse small:before,
+blockquote.pull-right .small:before,
+blockquote.pull-right footer:before,
+blockquote.pull-right small:before {
+  content: "";
+}
+.blockquote-reverse .small:after,
+.blockquote-reverse footer:after,
+.blockquote-reverse small:after,
+blockquote.pull-right .small:after,
+blockquote.pull-right footer:after,
+blockquote.pull-right small:after {
+  content: "\00A0 \2014";
+}
+address {
+  margin-bottom: 20px;
+  font-style: normal;
+  line-height: 1.428571429;
+}
+code {
+  padding: 2px 4px;
+  font-size: 1rem;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 0;
+}
+kbd {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #fff;
+  background-color: #333;
+  border-radius: 0;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+kbd kbd {
+  padding: 0;
+  font-size: 100%;
+  font-weight: 700;
+  box-shadow: none;
+}
+pre {
+  display: block;
+  padding: 1rem;
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+  line-height: 1.428571429;
+  word-break: break-all;
+  word-wrap: break-word;
+  color: $color-cyan;
+  background-color: $color-black;
+  border: 1px solid lighten($color-black, 20%);
+}
+pre code {
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+  white-space: pre-wrap;
+  background-color: transparent;
+  border-radius: 0;
+}
+.pre-scrollable {
+  max-height: 340px;
+  overflow-y: scroll;
+}
+
+
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  margin: 4px 0 0;
+  line-height: normal;
+}
+
+.open > .dropdown-toggle.btn-primary {
+  color: #222;
+  background-color: #0c0;
+  border-color: #000;
+}
+.open > .dropdown-toggle.btn-primary {
+  background-image: none;
+}
+
+fieldset[disabled] .btn-primary,
+fieldset[disabled] .btn-primary.active,
+fieldset[disabled] .btn-primary.focus,
+fieldset[disabled] .btn-primary:active,
+fieldset[disabled] .btn-primary:focus,
+fieldset[disabled] .btn-primary:hover {
+  background-color: #0f0;
+  border-color: #111;
+}
+
+input[type="button"].btn-block,
+input[type="reset"].btn-block,
+input[type="submit"].btn-block {
+  width: 100%;
+}
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity 0.15s linear;
+  -o-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+}
+.fade.in {
+  opacity: 1;
+}
+.collapse {
+  display: none;
+}
+.collapse.in {
+  display: block;
+}
+tbody.collapse.in {
+  display: table-row-group;
+}
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition-property: height, visibility;
+  transition-property: height, visibility;
+  -webkit-transition-duration: 0.35s;
+  transition-duration: 0.35s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+
+.btn-group-vertical > .btn-group:after,
+.btn-group-vertical > .btn-group:before,
+.btn-toolbar:after,
+.btn-toolbar:before,
+.clearfix:after,
+.clearfix:before,
+.container-fluid:after,
+.container-fluid:before,
+.container:after,
+.container:before,
+.dl-horizontal dd:after,
+.dl-horizontal dd:before,
+.form-horizontal .form-group:after,
+.form-horizontal .form-group:before,
+.modal-footer:after,
+.modal-footer:before,
+.nav:after,
+.nav:before,
+.navbar-collapse:after,
+.navbar-collapse:before,
+.navbar-header:after,
+.navbar-header:before,
+.navbar:after,
+.navbar:before,
+.pager:after,
+.pager:before,
+.panel-body:after,
+.panel-body:before,
+.row:after,
+.row:before {
+  content: " ";
+  display: table;
+}
+.btn-group-vertical > .btn-group:after,
+.btn-toolbar:after,
+.clearfix:after,
+.container-fluid:after,
+.container:after,
+.dl-horizontal dd:after,
+.form-horizontal .form-group:after,
+.modal-footer:after,
+.nav:after,
+.navbar-collapse:after,
+.navbar-header:after,
+.navbar:after,
+.pager:after,
+.panel-body:after,
+.row:after {
+  clear: both;
+}
+
+// scss/main.scss
+
+@import 'layout/columns';
+// @import 'layout/grid';
+
+@import 'base/typography';
+@import 'components/button';
+@import 'components/table';
+@import 'components/alert';
+@import 'components/breadcrumb';
+@import 'components/card';
+@import 'components/content';
+@import 'components/forms';
+@import 'components/jumbotron';
+@import 'components/nav';
+@import 'components/navbar';
+@import 'components/pagination';
+@import 'components/table-of-content';
+@import 'utilities/helpers';

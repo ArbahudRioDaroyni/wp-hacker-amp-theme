@@ -1,0 +1,64 @@
+$legacy_support_for_ie: false !default;
+$normalize_headings: false;
+$size-1: 1rem;
+
+// $font_family: sans-serif !default;
+$font-family-primary: Hacked-KerX, monospace;
+$font-family-secondary: monospace;
+$font-size: 1.85em;
+
+// $background: #fff !default;
+$background-primary: #222222;
+
+// $color: #000 !default;
+$color-primary: #00ff00;
+$color-secondary: #c7c7c7;
+$color-green: #00dd00;
+$color-blue: #7d8cff;
+$color-purple: #bc3eff;
+$color-cyan: #10e3ff;
+$color-yellow: #f4ff00;
+$color-red: #dd0000;
+$color-black: #000000;
+$color-white: #ffffff;
+$color-turquoise-sea: #2dd4bf;
+
+$colors: (
+  success: $color-green,
+  info: $color-cyan,
+  warning: $color-yellow,
+  danger: $color-red
+);
+
+$breakpoints: (
+    xs: 480px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+);
+
+$line-height: 1.428571429;
+
+$h1_font_size: 2em;
+$h2_font_size: 1.5em;
+$h3_font_size: 1.17em;
+$h4_font_size: 1em;
+$h5_font_size: 0.83em;
+$h6_font_size: 0.75em;
+
+$h1_margin: 0.67em 0;
+$h2_margin: 0.83em 0;
+$h3_margin: 1em 0;
+$h4_margin: 1.33em 0;
+$h5_margin: 1.67em 0;
+$h6_margin: 2.33em 0;
+
+$padding-1: $size-1;
+$margin-1: $size-1;
+
+$paddingx-1: 0 $size-1;
+$marginx-1: 0 $size-1;
+
+$paddingy-1: $size-1 0;
+$marginy-1: $size-1 0;

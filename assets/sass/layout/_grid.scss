@@ -1,0 +1,36 @@
+$columns: 12;
+$gap: 30px;
+
+@mixin create-selectors($breakpoint: null) {
+    $infix: if($breakpoint == null, '', '-#{$breakpoint}');
+
+    @for $i from 1 through $columns {
+        .cols#{$infix}-#{$i} {
+            grid-column-end: span $i;
+        }
+        .cols-offset#{$infix}-#{$i} {
+            grid-column-start: $i + 1;
+        }
+        .rows#{$infix}-#{$i} {
+            grid-row-end: span $i;
+        }
+        .rows-offset#{$infix}-#{$i} {
+            grid-row-start: $i + 1;
+        }
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    grid-gap: $gap;
+    gap: $gap;
+}
+
+@include create-selectors;
+
+@each $breakpoint, $width in $breakpoints {
+    @media (min-width: $width) {
+        @include create-selectors($breakpoint);
+    }
+}

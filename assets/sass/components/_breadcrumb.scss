@@ -1,0 +1,57 @@
+.breadcrumb {
+  > ul {
+    padding: .5rem 1rem;
+    margin-bottom: 2rem;
+    list-style: none;
+    background-color: $color-black;
+    overflow-x: auto;
+    white-space: nowrap;
+  
+    > li {
+      display: inline-block;
+
+      > a {
+        text-transform: lowercase;
+      }
+
+      &:first-child {
+        a {
+          color: $color-purple;
+        }
+      }
+
+      &:nth-child(2) {
+        a {
+          position: relative;
+          left: -.6rem;
+          color: $color-turquoise-sea;
+        }
+
+        &::before{
+          content: "@";
+          color: $color-blue;
+        }
+
+        &::after {
+          content: "~";
+          color: $color-yellow;
+        }
+      }
+  
+      &:last-child{
+        span {
+          color: $color-green;
+        }
+
+        &::before {
+          content: "./";
+          color: $color-yellow;
+        }
+      }
+    }
+  
+    > .active {
+      color: $color-purple;
+    }
+  }
+}

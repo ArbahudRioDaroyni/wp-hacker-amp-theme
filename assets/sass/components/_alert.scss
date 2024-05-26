@@ -1,0 +1,28 @@
+.alert {
+	padding: $size-1 * 1.5;
+	margin-bottom: $size-1 * 2;
+	border-radius: 0;
+	background-color: $color-black;
+
+	div p:last-child{
+		margin-bottom: 0;
+	}
+
+	&-link {
+		font-weight: bold;
+	}
+}
+
+@each $key, $value in $colors {
+	&.alert-#{$key} {
+		color: $value;
+
+		hr {
+			border-top-color: lighten($color-black, 30%);
+		}
+
+		.alert-link {
+			color: darken($value, 10%);
+		}
+	}
+}

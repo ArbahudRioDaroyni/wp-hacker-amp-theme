@@ -1,0 +1,103 @@
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.form {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  
+  .form-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+    width: 100%;
+    flex-direction: column;
+  
+    .promt {
+      color: $color-turquoise-sea;
+      margin: 0;
+      text-wrap: nowrap;
+    
+      &::after {
+        content: " ~";
+        color: $color-yellow;
+      }
+    
+      .author {
+        color: $color-purple;
+    
+        &::after {
+          content: "@";
+          color: $color-blue;
+        }
+      }
+    
+      .char {
+        color: $color-yellow;
+      }
+    }
+
+    > .input-group {
+      display: flex;
+      width: 100%;
+
+      > .char {
+        color: $color-yellow;
+        margin-right: .5rem;
+      }
+    }
+  
+    input[type=text].input,
+    input[type=email].input,
+    input[type=url].input,
+    textarea.input {
+      width: 100%;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      color: $color-secondary;
+    }
+  }
+}
+
+.form-item {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  display: block;
+  font-weight: bold;
+}
+
+
+
+.form-button {
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background-color: #0056b3;
+}
+
+.form-message {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.form-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.form-error {
+  background-color: #dc3545;
+  color: white;
+}

@@ -1,0 +1,58 @@
+<!doctype html>
+<html ⚡>
+<head>
+  <meta charset="utf-8">
+  <title>Contoh Sederhana AMP Bind Tanpa amp-state</title>
+  <link rel="canonical" href="self.html">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <style amp-custom>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0 20px 0;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #28a745;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #218838;
+    }
+  </style>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+</head>
+<body>
+
+<form>
+  <fieldset>
+    <input type="text" id="text" [value]="textValue">
+  </fieldset>
+</form>
+
+<button on="tap:AMP.setState({ textValue: 'sukses' })">Click me</button>
+
+<a rel="nofollow"
+class="comment-reply-link btn btn-primary"
+href="#comment-5076"
+on="tap:AMP.setState({ textValue: event.currentTarget.getAttribute('data-commentid') })"
+data-commentid="5076"
+data-postid="2046"
+data-belowelement="div-comment-5076"
+data-respondelement="respond"
+data-replyto="Balasan untuk Bayu"
+aria-label="Balasan untuk Bayu">Balas</a>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+.w-100 { width: 100%; }
+.h-100 { height: 100%; }
+.is-hidden { display: none; }
+.p-0 { padding: 0; }
+.px-1 { padding: 0 $size-1; }
+.py-1 { padding: $size-1 0; }
+.my-3 { margin: $size-1*3 0; }
+.m-0 { margin: 0; }
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: $size-1; }
+.mb-1 { margin-bottom: $size-1; }
+.d-flex { display: flex; }
+.align-items-center { align-items: center; }
+.align-self-end { align-self: flex-end; }
+.justify-content-center { justify-content: center; }
+.justify-content-between { justify-content: space-between; }
+
+.icon {
+  width: 19px;
+  height: 19px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.icon-arrow-right {
+  background-image: url('https://jejakcyber.com/wp-content/themes/wp-hacker-amp-theme/assets/svg/arrow-right.svg');
+}
+.icon-search {
+  background-image: url('https://jejakcyber.com/wp-content/themes/wp-hacker-amp-theme/assets/svg/search.svg');
+}
+.icon-download {
+  background-image: url('https://jejakcyber.com/wp-content/themes/wp-hacker-amp-theme/assets/svg/download.svg');
+}
+.icon-close {
+  background-image: url('https://jejakcyber.com/wp-content/themes/wp-hacker-amp-theme/assets/svg/close.svg');
+}
+.icon-info {
+  background-image: url('https://jejakcyber.com/wp-content/themes/wp-hacker-amp-theme/assets/svg/info.svg');
+}
+
