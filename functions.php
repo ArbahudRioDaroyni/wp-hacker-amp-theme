@@ -444,14 +444,14 @@ include 'inc/register-file-meta-box-spesifikasi.php';
 include 'inc/register-file-post-type.php';
 
 function get_first_image_in_post() {
-	global $post, $posts;
 	$first_img = '';
-	ob_start();
-	ob_end_clean();
-	$output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
-	$first_img = $matches [1] [0];
-	if(empty($first_img)){
-		$first_img = get_default_image();
+	$post_content = get_the_content();
+	$pattern = '/<img.+src=[\'"]([^\'"]+)[\'"].*>/i';
+	preg_match($pattern, $post_content, $matches);
+	if (!empty($matches) && isset($matches[1])) {
+		$first_img = $matches[1];
+	} else {
+		$first_img = get_template_directory_uri() . '/assets/image/logo-jejakcyber.png';
 	}
 
 	return $first_img;

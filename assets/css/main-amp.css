@@ -279,7 +279,10 @@ small {
 .text-center {
   text-align: center; }
 
-ol ol, ol ul, ul ol, ul ul {
+ol ol,
+ol ul,
+ul ol,
+ul ul {
   margin-bottom: 0; }
 
 blockquote {
@@ -339,8 +342,14 @@ code {
   padding: 2px 4px;
   font-size: 1rem;
   color: #c7254e;
-  background-color: #f9f2f4;
+  background-color: #ffffff;
   border-radius: 0; }
+
+em {
+  color: #2dd4bf; }
+
+strong {
+  color: #2dd4bf; }
 
 kbd {
   padding: 2px 4px;
@@ -359,8 +368,8 @@ kbd kbd {
 pre {
   display: block;
   padding: 1rem;
+  font-size: 1rem;
   margin: 0 0 1rem;
-  font-size: 1.2rem;
   line-height: 1.428571429;
   word-break: break-all;
   word-wrap: break-word;
@@ -372,7 +381,6 @@ pre code {
   padding: 0;
   font-size: inherit;
   color: inherit;
-  white-space: pre-wrap;
   background-color: transparent;
   border-radius: 0; }
 
@@ -804,6 +812,8 @@ th {
   background-color: #000000;
   overflow-x: auto;
   white-space: nowrap; }
+  .breadcrumb > ul > .active {
+    color: #bc3eff; }
   .breadcrumb > ul > li {
     display: inline-block; }
     .breadcrumb > ul > li > a {
@@ -825,8 +835,6 @@ th {
     .breadcrumb > ul > li:last-child::before {
       content: "./";
       color: #f4ff00; }
-  .breadcrumb > ul > .active {
-    color: #bc3eff; }
 
 .card {
   display: block;
@@ -1302,7 +1310,7 @@ fieldset {
     float: left;
     padding: 15px 15px;
     font-size: 1.2rem;
-    line-height: 1.5rem;
+    line-height: 1rem;
     height: 50px;
     text-transform: lowercase; }
     .navbar .navbar-header .navbar-brand:focus, .navbar .navbar-header .navbar-brand:hover {
@@ -1546,9 +1554,16 @@ fieldset {
   list-style-type: none;
   padding: 0; }
   .table-of-contents ul li::before {
-    content: "├─"; }
+    content: "├─";
+    font-size: 1.5rem; }
   .table-of-contents ul li:last-child::before {
-    content: "└─"; }
+    content: "└─";
+    font-size: 1.5rem; }
+  .table-of-contents ul li a {
+    padding-left: .3rem; }
+    .table-of-contents ul li a::before {
+      content: "./";
+      color: #f4ff00; }
   .table-of-contents ul li ul li::before {
     content: "|  ├─"; }
   .table-of-contents ul li ul li:last-child::before {
@@ -1565,11 +1580,6 @@ fieldset {
     content: "|  |  |  |  ├─"; }
   .table-of-contents ul li ul li ul li ul li ul li:last-child::before {
     content: "|  |  |  |  └─"; }
-  .table-of-contents ul li a {
-    padding-left: .3rem; }
-    .table-of-contents ul li a::before {
-      content: "./";
-      color: #f4ff00; }
 
 .w-100 {
   width: 100%; }

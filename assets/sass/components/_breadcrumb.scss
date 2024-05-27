@@ -1,16 +1,20 @@
 .breadcrumb {
-  > ul {
+  >ul {
     padding: .5rem 1rem;
     margin-bottom: 2rem;
     list-style: none;
     background-color: $color-black;
     overflow-x: auto;
     white-space: nowrap;
-  
-    > li {
+
+    >.active {
+      color: $color-purple;
+    }
+
+    >li {
       display: inline-block;
 
-      > a {
+      >a {
         text-transform: lowercase;
       }
 
@@ -27,7 +31,7 @@
           color: $color-turquoise-sea;
         }
 
-        &::before{
+        &::before {
           content: "@";
           color: $color-blue;
         }
@@ -37,8 +41,8 @@
           color: $color-yellow;
         }
       }
-  
-      &:last-child{
+
+      &:last-child {
         span {
           color: $color-green;
         }
@@ -48,10 +52,6 @@
           color: $color-yellow;
         }
       }
-    }
-  
-    > .active {
-      color: $color-purple;
     }
   }
 }

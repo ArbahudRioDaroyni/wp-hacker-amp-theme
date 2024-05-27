@@ -7,10 +7,21 @@
 
       &::before {
         content: "├─";
+        font-size: 1.5rem;
       }
 
       &:last-child::before {
         content: "└─";
+        font-size: 1.5rem;
+      }
+
+      a {
+        padding-left: .3rem;
+
+        &::before {
+          content: "./";
+          color: $color-yellow;
+        }
       }
 
       $space: "|\00a0\00a0";
@@ -21,21 +32,14 @@
           &::before {
             content: $space + "├─";
           }
+
           &:last-child::before {
             content: $space + "└─";
           }
         }
+
         $space: $space + "|\00a0\00a0";
         $tag: $tag + " ul li";
-      }
-
-      a {
-        padding-left: .3rem;
-
-        &::before {
-          content: "./";
-          color: $color-yellow;
-        }
       }
     }
   }

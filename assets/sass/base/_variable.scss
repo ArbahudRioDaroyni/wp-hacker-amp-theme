@@ -11,17 +11,18 @@ $font-size: 1.85em;
 $background-primary: #222222;
 
 // $color: #000 !default;
-$color-primary: #00ff00;
-$color-secondary: #c7c7c7;
-$color-green: #00dd00;
-$color-blue: #7d8cff;
-$color-purple: #bc3eff;
-$color-cyan: #10e3ff;
-$color-yellow: #f4ff00;
-$color-red: #dd0000;
+$color-primary: #00ff00; //Lime Green
+$color-secondary: #c7c7c7; //Light Gray
+$color-green: #00dd00; //Bright Green
+$color-blue: #7d8cff; //Light Periwinkle
+$color-purple: #bc3eff; //Electric Purple
+$color-cyan: #10e3ff; //Sky Blue
+$color-yellow: #f4ff00; //Neon Yellow
+$color-red: #dd0000; //Bright Red
+$color-pink: #c7254e; //Merah Muda
+$color-turquoise-sea: #2dd4bf; //Turquoise Sea
 $color-black: #000000;
 $color-white: #ffffff;
-$color-turquoise-sea: #2dd4bf;
 
 $colors: (
   success: $color-green,
